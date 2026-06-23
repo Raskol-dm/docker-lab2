@@ -15,3 +15,7 @@
 ## Запуск
 
 Перед запуском нужно создать файл .env на основе .env.example:
+
+## docker compose down -v
+При docker compose down данные сохраняются, потому что именованный volume postgres_data не удаляется.
+При docker compose down -v Docker удаляет volume postgres_data, поэтому файлы PostgreSQL исчезают, и после нового запуска база создаётся заново пустой.
